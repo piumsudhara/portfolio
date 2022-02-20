@@ -34,13 +34,13 @@ const educationData = [
 ];
 
 const experienceData = [
-  // {
-  //   id: 1,
-  //   title: "Cloud Operations Engineer at LSEG",
-  //   years: "2022 - Present",
-  //   content:
-  //     "Leading global financial markets infrastructure and data provider.",
-  // },
+  {
+    id: 1,
+    title: "Cloud Operations Engineer at LSEG",
+    years: "2022 - Present",
+    content:
+      "Leading global financial markets infrastructure and data provider.",
+  },
   {
     id: 2,
     title: "Associate Site Reliability Engineer at Chakray",
