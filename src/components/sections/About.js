@@ -7,7 +7,7 @@ const aboutContent = {
   name: "Pium Sudhara",
   avatarImage: "/images/profile.png",
   content:
-    "I am Pium Sudhara, Cloud Engineer from Colombo, Sri Lanka. Dedicated, adaptive, hardworking tech enthusiast seeks out new knowledge and skills. 2 years of experience development side. Yoo Bro...",
+    "I am Pium Sudhara, Cloud Engineer from Colombo, Sri Lanka. Dedicated, adaptive, hardworking tech enthusiast seeks out new knowledge and skills. 2 years of experience development side.",
 };
 
 const progressData = [
