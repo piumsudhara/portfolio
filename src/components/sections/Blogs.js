@@ -5,23 +5,23 @@ import Pagetitle from "../elements/Pagetitle";
 const allBlogs = [
   {
     id: 1,
-    title: "Infrastructure on AWS With Terraform",
+    title: "Deploy React App to AWS Fargate — Part 02",
     image: "images/blog/blog-image1.png",
-    filesource: "https://piumsudhara.medium.com/infrastructure-on-aws-with-terraform-963ab882a5a",
+    filesource: "#",
     author: "Pium Sudhara"
   },
   {
     id: 2,
-    title: "Serverless API with Firebase",
-    image: "images/blog/blog-image2.jpeg",
-    filesource: "https://piumsudhara.medium.com/serverless-api-with-firebase-26f8bc269643",
+    title: "Deploy React App to AWS Fargate — Part 01",
+    image: "images/blog/blog-image2.png",
+    filesource: "https://piumsudhara.medium.com/deploy-react-app-to-aws-fargate-part-01-637c46bd4116",
     author: "Pium Sudhara"
   },
   {
     id: 3,
-    title: "Deploy NodeJS Application with AWS Beanstalk",
+    title: "Provision AWS EKS Cluster using Terraform",
     image: "images/blog/blog-image3.png",
-    filesource: "https://towardsaws.com/deploy-nodejs-application-with-aws-beanstalk-c8b8414dc3c1",
+    filesource: "https://piumsudhara.medium.com/provision-aws-eks-cluster-using-terraform-6c9d19de26a2",
     author: "Pium Sudhara"
   },
 ];

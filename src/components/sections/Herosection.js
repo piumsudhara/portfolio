@@ -31,7 +31,7 @@ function Herosection(props) {
             {" "}
             <Typed
               strings={[
-                "Tech Enthusiast",
+                "AWS Community Builder",
               ]}
               typeSpeed={80}
               backSpeed={40}
