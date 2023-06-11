@@ -5,23 +5,23 @@ import Pagetitle from "../elements/Pagetitle";
 const allBlogs = [
   {
     id: 1,
-    title: "Deploy React App to AWS Fargate — Part 02",
+    title: "Deploying a Microservice into Amazon Elastic Kubernetes Service — Part 02",
     image: "images/blog/blog-image1.png",
     filesource: "#",
     author: "Pium Sudhara"
   },
   {
     id: 2,
-    title: "Deploy React App to AWS Fargate — Part 01",
+    title: "Deploying a Microservice into Amazon Elastic Kubernetes Service — Part 01",
     image: "images/blog/blog-image2.png",
-    filesource: "https://piumsudhara.medium.com/deploy-react-app-to-aws-fargate-part-01-637c46bd4116",
+    filesource: "https://towardsaws.com/deploying-a-microservice-into-amazon-elastic-kubernetes-service-part-01-24ab53ba3b7e",
     author: "Pium Sudhara"
   },
   {
     id: 3,
-    title: "Provision AWS EKS Cluster using Terraform",
+    title: "Amazon EKS and ArgoCD",
     image: "images/blog/blog-image3.png",
-    filesource: "https://piumsudhara.medium.com/provision-aws-eks-cluster-using-terraform-6c9d19de26a2",
+    filesource: "https://awstip.com/amazon-eks-and-argocd-bb954c980cef",
     author: "Pium Sudhara"
   },
 ];
