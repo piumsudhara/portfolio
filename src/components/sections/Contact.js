@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import Pagetitle from "../elements/Pagetitle";
+import emailjs from '@emailjs/browser';
 
 function Contact() {
   const [formdata, setFormdata] = useState({
@@ -28,8 +29,16 @@ function Contact() {
       setError(true);
       setMessage("Message is required");
     } else {
+      event.preventDefault();
+      emailjs.send("service_x8wby2d", "template_r8f65jl", formdata, "NM_o3p52we-J_ogKK");
       setError(false);
-      setMessage("You message has been sent!!!");
+      setMessage("Message Sent");
+      setFormdata({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
     }
   };
 
@@ -71,8 +80,7 @@ function Contact() {
                 animateOnce={true}
               >
                 <p>
-                  Wanna Contact Me? Send me an{" "}
-                  <a href="mailto:pium.karunasena@gmail.com">email</a>.
+                  Wanna Contact Me? Send me an email.
                 </p>
               </ScrollAnimation>
             </div>
@@ -106,7 +114,7 @@ function Contact() {
                       className="form-control"
                       id="InputEmail"
                       name="email"
-                      placeholder="Email address"
+                      placeholder="Your Email"
                       onChange={handleChange}
                       value={formdata.email}
                     />
