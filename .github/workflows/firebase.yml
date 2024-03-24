@@ -1,54 +1,18 @@
-name: Firebase CI
+name: Deploy to Preview Channel
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+  pull_request_target:
 jobs:
-  build:
+  build_and_preview:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - run: npm install
+      - run: npm run build
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm install -g yarn
-      - name: yarn install, build and test
-        run: |
-          yarn install
-          yarn build
-      - name: Archive Build
-        uses: actions/upload-artifact@v2
-        with:
-          name: build
-          path: build
-        
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    env:
-      FIREBASE_DEPLOY_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-    steps:
-      - uses: actions/checkout@v2
-      - name: Download Build
-        uses: actions/download-artifact@v2
-        with:
-          name: build
-          path: build
-      - name: Authenticate with Firebase
-        run: echo "$FIREBASE_DEPLOY_KEY" > $HOME/firebase_key.json
-      - name: Install Firebase CLI
-        run: npm install -g firebase-tools@latest
-      - name: Set up Firebase service account key
-        run: |
-          mkdir -p $HOME/.config/gcloud/
-          mv $HOME/firebase_key.json $HOME/.config/gcloud/application_default_credentials.json
-      - name: Deploy to Firebase
-        run: firebase deploy --project pium95 --only hosting --token "${{ secrets.FIREBASE_TOKEN }}" --debug
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          expires: 10d
+          projectId: your-Firebase-project-ID
