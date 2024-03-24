@@ -1,4 +1,4 @@
-name: Deploy to Preview Channel
+name: Firebase CI
 
 on:
   pull_request_target:
