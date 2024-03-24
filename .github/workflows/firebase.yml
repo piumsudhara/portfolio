@@ -1,4 +1,4 @@
-name: Deploy to Firebase Hosting on merge
+name: Firebase Deployment
 'on':
   push:
     branches:
@@ -20,7 +20,7 @@ jobs:
         run: |
           yarn install
           yarn build
-      - name: Archive Build
+      - name: Create & Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
           name: build
@@ -29,14 +29,9 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Download Build
-        uses: actions/download-artifact@v2
-        with:
-          name: build
-          path: build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+    steps:   
+      - name: Firebase Production Deployment
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PIUM95 }}'
