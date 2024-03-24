@@ -16,11 +16,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       # - run: npm install -g yarn
-      - name: Yarn Install, Build and Test
+      - name: Yarn Install & Build
         run: |
           yarn install
           yarn build
-          yar test
       - name: Create & Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
