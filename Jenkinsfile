@@ -1,23 +1,32 @@
 pipeline {
     agent any
-    environment {
-        PATH = "/usr/bin:/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin"
-    }
+    
     stages {
-        stage('Install Dependencies') {
-            steps {
-                sh 'npm install'
-            }
-        }
         stage('Build') {
+            matrix {
+                axes {
+                    axis {
+                        name 'NODE_VERSION'
+                        values '18.x'
+                    }
+                }
+            }
             steps {
-                sh 'npm run build'
+                checkout scm
+                container('node:${NODE_VERSION}') {
+                    sh 'yarn install && yarn build'
+                }
+                archiveArtifacts artifacts: 'build', allowEmptyArchive: true
             }
         }
-        stage('Deploy to Firebase') {
+        
+        stage('Deploy') {
+            agent any
             steps {
-                withCredentials([string(credentialsId: 'FIREBASE_SERVICE_ACCOUNT_PIUM95', variable: 'FIREBASE_TOKEN')]) {
-                    sh 'firebase deploy --token "$FIREBASE_TOKEN"'
+                checkout scm
+                unarchive mapping: ['build' : 'build']
+                withCredentials([string(credentialsId: 'FIREBASE_SERVICE_ACCOUNT_PIUM95', variable: 'FIREBASE_SERVICE_ACCOUNT_PIUM95')]) {
+                    sh 'npx firebase deploy --token $FIREBASE_SERVICE_ACCOUNT_PIUM95 --only hosting:live --project pium95'
                 }
             }
         }
