@@ -4,6 +4,11 @@ pipeline {
         nodejs 'nodejs'
     }
     stages {
+        stage('Cleanup Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
         stage('Checkout') {
             steps {
                 script {
