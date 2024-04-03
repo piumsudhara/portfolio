@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Install Coreutils') {
-            steps {
-                sh 'apt-get update && apt-get install -y coreutils'
-            }
-        }
         stage('Checkout') {
             steps {
                 script {
@@ -14,7 +9,7 @@ pipeline {
                                                   credentialsId: 'github']]])
                 }
             }
-        }
+        } 
     }
 }
 
