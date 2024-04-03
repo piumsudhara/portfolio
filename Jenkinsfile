@@ -1,27 +1,17 @@
 pipeline {
     agent any
-    
     stages {
-        stage('Build') {
-            matrix {
-                axes {
-                    axis {
-                        name 'NODE_VERSION'
-                        values '18.x'
-                    }
-                }
-            }
+        stage('Install Dependencies') {
             steps {
-                checkout scm
-                container('node:${NODE_VERSION}') {
-                    sh 'yarn install && yarn build'
-                }
-                archiveArtifacts artifacts: 'build', allowEmptyArchive: true
+                sh 'npm install'
             }
         }
-        
-        stage('Deploy') {
-            agent any
+        stage('Build') {
+            steps {
+                sh 'npm run build'
+            }
+        }
+        stage('Deploy to Firebase') {
             steps {
                 checkout scm
                 unarchive mapping: ['build' : 'build']
