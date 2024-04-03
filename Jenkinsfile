@@ -1,25 +1,36 @@
 pipeline {
     agent any
-    environment {
-        PATH = "/usr/local/bin:$PATH"
-    }
     stages {
-        stage('Checkout') {
+        stage('Build') { 
             steps {
-                script {
-                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], 
-                              userRemoteConfigs: [[url: 'https://github.com/piumsudhara/portfolio.git',
-                                                  credentialsId: 'github']]])
-                }
-            }
-        }
-        stage('Install Dependencies') {
-            steps {
-                sh 'npm install'
+                sh 'npm install' 
             }
         }
     }
 }
+
+// pipeline {
+//     agent any
+//     environment {
+//         PATH = "/usr/local/bin:$PATH"
+//     }
+//     stages {
+//         stage('Checkout') {
+//             steps {
+//                 script {
+//                     checkout([$class: 'GitSCM', branches: [[name: '*/main']], 
+//                               userRemoteConfigs: [[url: 'https://github.com/piumsudhara/portfolio.git',
+//                                                   credentialsId: 'github']]])
+//                 }
+//             }
+//         }
+//         stage('Install Dependencies') {
+//             steps {
+//                 sh 'npm install'
+//             }
+//         }
+//     }
+// }
 
         
         // stage('Build') {
