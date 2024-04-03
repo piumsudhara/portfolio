@@ -4,12 +4,25 @@ pipeline {
         nodejs 'nodejs'
     }
     stages {
-        stage('Build') { 
+        stage('Checkout') {
+            steps {
+                script {
+                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], 
+                              userRemoteConfigs: [[url: 'https://github.com/piumsudhara/portfolio.git',
+                                                  credentialsId: 'github']]])
+                }
+            }
+        }
+        stage('Install Dependencies') { 
             steps {
                 sh 'npm install' 
             }
         }
-    }
+        stage('Node Build') {
+            steps {
+                sh 'npm run build'
+            }
+        }
 }
 
 // pipeline {
