@@ -1,11 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout Source') {
-			steps {
-				checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/piumsudhara/portfolio.git']]])
-			}
-		}
+        stage('Checkout') {
+            steps {
+                script {
+                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/piumsudhara/portfolio.git', credentialsId: 'github-pat']]])
+                }
+            }
+        }
         // stage('Install Dependencies') {
         //     steps {
         //         sh 'npm install'
