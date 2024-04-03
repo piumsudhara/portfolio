@@ -1,13 +1,23 @@
 pipeline {
     agent any
     stages {
+        stage('Install Coreutils') {
+            steps {
+                sh 'apt-get update && apt-get install -y coreutils'
+            }
+        }
         stage('Checkout') {
             steps {
                 script {
-                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/piumsudhara/portfolio.git', credentialsId: 'GitHub']]])
+                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], 
+                              userRemoteConfigs: [[url: 'https://github.com/piumsudhara/portfolio.git',
+                                                  credentialsId: 'github-pat']]])
                 }
             }
         }
+    }
+}
+
         // stage('Install Dependencies') {
         //     steps {
         //         sh 'npm install'
@@ -27,5 +37,5 @@ pipeline {
         //         }
         //     }
         // }
-    }
-}
+//     }
+// }
