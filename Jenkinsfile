@@ -11,7 +11,7 @@ pipeline {
                 script {
                     checkout([$class: 'GitSCM', branches: [[name: '*/main']], 
                               userRemoteConfigs: [[url: 'https://github.com/piumsudhara/portfolio.git',
-                                                  credentialsId: 'github-pat']]])
+                                                  credentialsId: 'github']]])
                 }
             }
         }
