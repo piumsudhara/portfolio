@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 script {
-                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/piumsudhara/portfolio.git', credentialsId: 'github-pat']]])
+                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/piumsudhara/portfolio.git', credentialsId: 'GitHub']]])
                 }
             }
         }
