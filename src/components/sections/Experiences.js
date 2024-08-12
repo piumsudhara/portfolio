@@ -34,38 +34,38 @@ const educationData = [
 ];
 
 const experienceData = [
-  // {
-  //   id: 1,
-  //   title: "Senior Cloud Engineer at LSEG",
-  //   years: "2024 - Present",
-  //   content:
-  //     "Leading global financial markets infrastructure and data provider.",
-  // },
   {
     id: 1,
-    title: "Cloud Operations Engineer at LSEG",
-    years: "2022 - Present",
+    title: "Senior Cloud Operations Engineer at LSEG",
+    years: "2024 August - Present",
     content:
       "Leading global financial markets infrastructure and data provider.",
   },
   {
     id: 2,
+    title: "Cloud Operations Engineer at LSEG",
+    years: "2022 February - 2024 August",
+    content:
+      "Leading global financial markets infrastructure and data provider.",
+  },
+  {
+    id: 3,
     title: "Associate Site Reliability Engineer at Chakray",
-    years: "2021 - 2022",
+    years: "2021 October - 2022 February",
     content:
       "Design strategies and implement best of breed Integration, API, DevOps and Identity technologies",
   },
   {
-    id: 3,
-    title: "Full Stack Developer at Codezilla",
-    years: "2017 - 2013",
+    id: 4,
+    title: "Associate DevOps Engineer at Codezilla",
+    years: "2019 November - 2021 October",
     content:
       "Codezilla small startup based in Colombo. Developing web applications, and mobile applications.",
   },
   {
-    id: 4,
-    title: "Android Developer at Moneta",
-    years: "2019 - 2019",
+    id: 5,
+    title: "Associate Software Engineer at Moneta",
+    years: "2019 August - 2019 October",
     content:
       "Development and maintenance of 'Moneta' the financial Android Application and their back-end services.",
   },
