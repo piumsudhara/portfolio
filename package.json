@@ -3,7 +3,6 @@
   "version": "1.0.2",
   "private": true,
   "dependencies": {
-    "babel": "^7.16.0",
     "@emailjs/browser": "^4.3.3",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -28,7 +27,8 @@
     "react-typed": "^1.2.0",
     "react-visibility-sensor": "^5.1.1",
     "sass": "^1.35.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "babel": "^7.16.0"
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
