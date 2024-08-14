@@ -15,13 +15,13 @@ export const SOCIALS = [
     icon: IconGithub,
   },
   {
-    name: "Medium",
-    url: "https://medium.com/@piumsudhara",
-    icon: IconMedium,
-  },
-  {
     name: "Twitter",
     url: "https://x.com/piumsudhara",
     icon: IconTwitter,
+  },
+  {
+    name: "Medium",
+    url: "https://medium.com/@piumsudhara",
+    icon: IconMedium,
   },
 ];
