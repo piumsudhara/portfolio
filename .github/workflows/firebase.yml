@@ -16,15 +16,15 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Yarn Install & Build
+      - name: Install Dependencies & Build Astro
         run: |
-          yarn install
-          yarn build
+          npm install
+          npm run build
       - name: Create & Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
           name: build
-          path: build 
+          path: dist
   deploy:
     name: Deploy
     needs: build
@@ -36,7 +36,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build
-          path: build     
+          path: dist     
       - name: Firebase Production Deployment
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
