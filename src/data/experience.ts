@@ -12,7 +12,7 @@ export const EXPERIENCE: ExperienceProp[] = [
     logo: "/logos/lseg.png",
   },
   {
-    dates: "February 2022 — Present",
+    dates: "February 2022 — August 2024",
     title: "Cloud Operations Engineer",
     company: "London Stock Exchange Group",
     companyUrl: "https://www.lseg.com/en",
