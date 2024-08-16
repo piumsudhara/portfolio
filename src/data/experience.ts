@@ -1,16 +1,16 @@
 import type { Props as ExperienceProp } from "../components/experience/props";
 
 export const EXPERIENCE: ExperienceProp[] = [
-  // {
-  //   dates: "August 2024 — Present",
-  //   title: "Senior Cloud Operations Engineer",
-  //   company: "London Stock Exchange Group",
-  //   companyUrl: "https://www.lseg.com/en",
-  //   description:
-  //     "LSEG is one of the world’s leading providers of financial markets infrastructure and delivers financial data, analytics, news and index products to more than 40,000 customers in over 170 countries.",
-  //     technologies: ["AWS", "GCP", "Azure", "Terraform", "Vault", "Ansible", "Docker", "Kubenertes", "Jenkins", "GitLab", "DataDog", "Consul", "Python"],
-  //   logo: "/logos/lseg.png",
-  // },
+  {
+    dates: "August 2024 — Present",
+    title: "Senior Cloud Operations Engineer",
+    company: "London Stock Exchange Group",
+    companyUrl: "https://www.lseg.com/en",
+    description:
+      "LSEG is one of the world’s leading providers of financial markets infrastructure and delivers financial data, analytics, news and index products to more than 40,000 customers in over 170 countries.",
+      technologies: ["AWS", "GCP", "Azure", "Terraform", "Vault", "Ansible", "Docker", "Kubenertes", "Jenkins", "GitLab", "DataDog", "Consul", "Python"],
+    logo: "/logos/lseg.png",
+  },
   {
     dates: "February 2022 — Present",
     title: "Cloud Operations Engineer",
