@@ -3,7 +3,7 @@ import type { Props as ExperienceProp } from "../components/experience/props";
 export const EXPERIENCE: ExperienceProp[] = [
   {
     dates: "August 2024 — Present",
-    title: "Senior Cloud Operations Engineer",
+    title: "Senior Cloud OPS/SRE Engineer",
     company: "London Stock Exchange Group",
     companyUrl: "https://www.lseg.com/en",
     description:
