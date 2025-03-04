@@ -8,7 +8,7 @@ export const EXPERIENCE: ExperienceProp[] = [
     companyUrl: "https://www.ifs.com",
     description:
       "IFS is the world’s leading provider of industrial AI and enterprise software for hardcore businesses that service, power and protect our planet.",
-      technologies: [],
+      technologies: ["Azure"],
     logo: "/logos/ifs.jpg",
   },
   {
