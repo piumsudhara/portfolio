@@ -2,7 +2,17 @@ import type { Props as ExperienceProp } from "../components/experience/props";
 
 export const EXPERIENCE: ExperienceProp[] = [
   {
-    dates: "August 2024 — Present",
+    dates: "March 2025 — Present",
+    title: "Senior DevOps Engineer",
+    company: "IFS",
+    companyUrl: "https://www.ifs.com",
+    description:
+      "IFS is the world’s leading provider of industrial AI and enterprise software for hardcore businesses that service, power and protect our planet.",
+      technologies: [""],
+    logo: "/logos/ifs.jpg",
+  },
+  {
+    dates: "August 2024 — March 2025",
     title: "Senior Cloud OPS/SRE Engineer",
     company: "London Stock Exchange Group",
     companyUrl: "https://www.lseg.com/en",
