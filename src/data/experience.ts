@@ -1,18 +1,18 @@
 import type { Props as ExperienceProp } from "../components/experience/props";
 
 export const EXPERIENCE: ExperienceProp[] = [
-  // {
-  //   dates: "July 2026 — Present",
-  //   title: "Associate Lead DevOps Engineer",
-  //   company: "LSEG",
-  //   companyUrl: "https://www.lseg.com/en",
-  //   description:
-  //     "LSEG is one of the world’s leading providers of financial markets infrastructure and delivers financial data, analytics, news and index products to more than 40,000 customers in over 170 countries.",
-  //     technologies: ["Azure"],
-  //   logo: "/logos/lseg.png",
-  // },
   {
-    dates: "March 2025 — Present",
+    dates: "July 2026 — Present",
+    title: "Associate Lead DevOps Engineer",
+    company: "LSEG",
+    companyUrl: "https://www.lseg.com/en",
+    description:
+      "LSEG is one of the world’s leading providers of financial markets infrastructure and delivers financial data, analytics, news and index products to more than 40,000 customers in over 170 countries.",
+      technologies: ["Azure"],
+    logo: "/logos/lseg.png",
+  },
+  {
+    dates: "March 2025 — July 2026",
     title: "Senior DevOps Engineer",
     company: "IFS",
     companyUrl: "https://www.ifs.com",
